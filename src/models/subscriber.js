@@ -1,6 +1,6 @@
 import { BaseModel } from '@/models/base'
 
-class Subscribe extends BaseModel {
+class Subscriber extends BaseModel {
   defaults () {
     return {
       first_name: '',
@@ -12,9 +12,9 @@ class Subscribe extends BaseModel {
 
   routes () {
     return {
-      create: 'email-subscribe'
+      save: 'email-subscribe'
     }
   }
 }
 
-export { Subscribe }
+export { Subscriber }

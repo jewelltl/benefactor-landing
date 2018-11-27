@@ -3,6 +3,6 @@ var prodEnv = require('./prod.env')
 
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
-  API_HOST: '"http://localhost:3000"',
+  API_HOST: '"https://onebenefactor.powercode.pro"',
   API_NAMESPACE: '"api/v1"'
 })
