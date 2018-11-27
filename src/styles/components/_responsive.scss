@@ -1,0 +1,123 @@
+/* ==========================================================================
+   8.Small devices (landscape phones, 576px and up)
+   ========================================================================== */
+@media (min-width: 576px) {
+
+    .mr-sm-2 { margin-right: 1rem!important; }
+    
+    .hero-welcome-message { padding: 9rem 0 0; }
+    
+    .hero-welcome-message h1 { font-size: 3.75rem; }
+    
+    .hero-welcome-message h2 { margin: 1rem 0 3.75rem; }
+    
+    .signup-form { margin-bottom: 3.75rem; }
+    
+    .input-wrapper { position: relative; }
+    
+    .signup-form .btn {
+      position: absolute;
+      top: 7px;
+      right: 7px;
+    }
+    
+    .signup-form .form-control { padding: 2rem 15.4rem 2rem 1.5rem; }
+    
+    .hero-welcome-message .btn {
+      width: auto;
+      margin-top: 0;
+    }
+    
+    .modal-body { padding: 0 2rem 2.25rem; }
+    
+    .features .section-header h3 { font-size: 3rem; }
+    
+    .features-more-wrapper { padding: 3rem 1.5rem; }
+    
+    .cta h2 { font-size: 3.75rem; }
+}
+    
+/* ==========================================================================
+    9.Medium devices (tablets, 768px and up)
+    ========================================================================== */
+       
+@media (min-width: 768px) {
+    
+    .hero-welcome-message h2 { margin: 1rem 0 4.5rem; }
+    
+    .section-spacing { padding: 5.25rem 0; }
+    
+    .features.section-spacing { padding: 3rem 0 5.25rem; }
+    
+    .features-list [class^=col]:nth-last-child(-n+2) { margin-bottom: 0; }
+}
+    
+/* ==========================================================================
+    10.Large devices (desktops, 992px and up) 
+    ========================================================================== */
+       
+@media (min-width: 992px) {
+    
+    .hero-section {
+      background: url(~@/assets/img/hero-bg.svg) center 101% no-repeat;
+      background-size: 104%;
+    }
+    
+    .navbar:not(.affix) { background-color: transparent; }
+    
+    .navbar .nav-item .btn { margin: 0 0 0 20px; }
+    
+    .navbar-collapse {
+        background-color: transparent;
+        padding: 0;
+    }
+    
+    .ml-auto { padding: 0; }
+    
+    .hero-welcome-message { padding: 11.25rem 0 0; }
+    
+    .section-spacing { padding: 9rem 0; }
+    
+    .features.section-spacing { padding: 3.75rem 0 9rem; }
+    
+    .features .section-header {
+        text-align: left;
+        margin: 1.5rem 0 0;
+    }
+    
+    .features-more .container > .row > [class^=col]:not(:last-child) { margin-bottom: 0; }
+    
+    .cta { text-align: left; }
+    
+    .cta.section-spacing { padding: 6rem 0; }
+    
+    .cta svg { top: 1%; }
+    
+    .site-footer { text-align: left; }
+    
+    .site-footer .container > .row > [class^=col]:not(:last-child) { margin-bottom: 0; }
+    
+    .social {
+        text-align: right;
+        position: relative;
+        bottom: 10px;
+        margin-top: 0;
+    }
+}
+    
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    
+    .contact-form .form-control:not(.contact-message) {
+        padding: 0 1.5rem;
+        height: 3.1rem;
+    }
+    
+    .signup-form .form-control {
+        padding: 0 15.4rem 0 1.5rem;
+        height: 4.1rem;
+    }
+        
+    ::-ms-clear {
+        display: none;
+    }
+}

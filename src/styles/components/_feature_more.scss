@@ -1,0 +1,24 @@
+.features-more{
+    h2 {
+        color: #3b28ea;
+        font-size: 1.875rem;
+    }
+    img {
+        width: 130px;
+        height: 130px;
+        margin-top: 1.5rem;
+    }
+    .features-more-wrapper {
+        border: 1px solid #dddddd;
+        border-radius: 6px;
+        padding: 2.25rem 1rem;
+        transition: all 0.3s ease-in-out;
+        height: 100%;
+        &:hover {
+            border: solid 1px #3b28ea;
+        }
+    }
+    .container > .row > [class^=col]:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+} 

@@ -1,0 +1,294 @@
+.hero-section {
+    background: url(~@/assets/img/hero-bg.svg) center 100% no-repeat;
+    background-size: 104%;
+}
+  
+.navbar-collapse { text-align: center; }
+
+.ml-auto { padding: 1.5rem 0; }
+
+.navbar-light .navbar-toggler {
+    color: #3b28ea;
+    border-color: transparent;
+    background: transparent;
+}
+
+.hero-section .navbar .nav-link {
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar.affix .btn-nav { display: inline-block; }
+
+.navbar-light .navbar-nav .nav-link::after {
+content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #4533eb;
+    transition: width .3s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::after { width: 100%; }
+
+.navbar-toggler { cursor: pointer; }
+
+.navbar button { outline: none; }
+
+.btn-nav,
+.navbar.affix .btn-modal { display: none; }
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.98);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1040;
+    padding: 1rem;
+}
+
+.affix {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    z-index: 1040;
+    padding: 1rem;
+    box-shadow: 0 0 8px 0px rgba(88, 88, 88, 0.19);
+    -webkit-animation: slideInDown 1s both;
+    animation: slideInDown 1s both;
+}
+@-webkit-keyframes slideInDown {
+    from {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes slideInDown {
+    from {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.navbar-light .navbar-nav .nav-link,
+.hero-section .navbar.affix .nav-link,
+.navbar-light.affix .navbar-nav .nav-link:focus,
+.navbar-light.affix .navbar-nav .show>.nav-link { color: #3b28ea; }
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light.affix .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .show>.nav-link { color: #4533eb; }
+
+.navbar-toggler .icon-bar {
+    display: block;
+    width: 23px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #3b28ea;
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+.navbar-toggler:hover .icon-bar { background-color: #4533eb; }
+
+.navbar-toggler .icon-bar:not(:last-child) { margin-bottom: 5px; }
+
+.navbar-toggler .icon-bar:nth-of-type(2) { top: 1px; }
+
+.navbar-toggler .icon-bar:nth-of-type(3) { top: 2px; }
+
+.navbar-toggler.hamburger-active .icon-bar:nth-of-type(1) {
+    top: 7px;
+    transform: rotate(45deg);
+}
+
+.navbar-toggler.hamburger-active .icon-bar:nth-of-type(2) { background-color: transparent; }
+
+.navbar-toggler.hamburger-active .icon-bar:nth-of-type(3) {
+    top: -6.7px;
+    transform: rotate(-45deg);
+}
+
+.hero-welcome-message { padding: 6.75rem 0 0; }
+
+.hero-welcome-message h1,
+.hero-welcome-message h2 { color: #000; }
+
+.hero-welcome-message h1 {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.hero-welcome-message h2 {
+    margin: 1rem 0 3rem;
+    font-weight: 400;
+    font-size: 1.875rem;
+}
+
+.signup-form { margin-bottom: 3rem; }
+
+
+::-webkit-input-placeholder {
+    color: #898d98 !important;
+    font-size: 18px;
+}
+::-moz-placeholder {
+    color: #898d98 !important;
+    font-size: 18px;
+}
+:-ms-input-placeholder {
+    color: #898d98 !important;
+    font-size: 18px;
+}
+:-moz-placeholder {
+    color: #898d98 !important;
+    font-size: 18px;
+}
+
+.form-control {
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(142, 145, 169, 0.27);
+    color: #898d98;
+    font-size: 18px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: rgba(142, 145, 169, 0.5);
+    color: #000;
+}
+
+.signup-form .form-control {
+    padding: 1.7rem 1.5rem;
+    color: #3b28ea;
+    background: #d8d4fb;
+    border-color: #fff;
+}
+
+.signup-form .form-control:focus {
+    color: #000;
+    border-color: #fff;
+}
+.signup-form ::-webkit-input-placeholder {
+    color: #3b28ea !important;
+    font-size: 18px;
+}
+.signup-form ::-moz-placeholder {
+    color: #3b28ea !important;
+    font-size: 18px;
+}
+.signup-form :-ms-input-placeholder {
+    color: #3b28ea !important;
+    font-size: 18px;
+}
+.signup-form :-moz-placeholder {
+    color: #3b28ea !important;
+    font-size: 18px;
+}
+@-webkit-keyframes autofill {
+    to {
+    color: #3b28ea;
+    background: #d8d4fb;
+    }
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.btn {
+    padding: .75rem 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 2rem;
+}
+
+.btn-primary,
+.btn:focus,
+.btn-primary:disabled,
+.navbar.affix .nav-item .btn-primary {
+    color: #fff;
+    background-color: #3b28ea;
+    border-color: #3b28ea;
+}
+
+.btn-primary:hover,
+.navbar.affix .nav-item .btn-primary:hover,
+.btn-primary:not([disabled]):not(.disabled):active {
+    color: #fff;
+    background-color: #4533eb;
+    border-color: #4533eb;
+}
+
+.btn-primary:not([disabled]):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn:focus { box-shadow: none; }
+
+.navbar .nav-item .btn {
+    padding: .5rem 2rem;
+    margin: 10px 0;
+    background-color: transparent;
+    border-color: #3b28ea;
+    color: #3b28ea;
+}
+
+.navbar .nav-item .btn:hover {
+    background-color: #4533eb;
+    border-color: #4533eb;
+    color: #fff;
+}
+
+.hero-welcome-message .btn {
+    width: 100%;
+    margin-top: .75rem;
+}
+
+#mc-error .fa-exclamation-triangle,
+#mc-success .fa-envelope { margin-right: .5rem; }
+
+#mc-error,
+#mc-success {
+    padding: .5rem 0;
+    color: #fff;
+    display: none;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 2rem;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+#mc-error { background: #f44336; }
+
+#mc-success { background: #28a745; }
+@keyframes float {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, -10px);
+    }
+    100% {
+        transform: translate(0, 0px);
+    }
+}
+
+.hero-img { animation: float 6s ease-in-out infinite; }
