@@ -1,44 +1,53 @@
 <template>
-  <header class="hero-section" id="hero-section">         
-    <b-navbar toggleable="lg" type="light" variant="light" :class="{affix: affix}">
-      <b-container>
-        <b-navbar-brand href="#">
-          <img class="logo" src="@/assets/img/logo_main.svg" alt="Alpha">
-        </b-navbar-brand>
+  <div>
+    <header class="hero-section" id="hero-section">         
+      <b-navbar toggleable="lg" type="light" variant="light" :class="{affix: affix}">
+        <b-container>
+          <b-navbar-brand href="#">
+            <img class="logo" src="@/assets/img/logo_main.svg" alt="Alpha">
+          </b-navbar-brand>
 
-        <b-collapse is-nav id="nav_collapse">          
-          <b-navbar-nav class="ml-auto">
-            <b-nav-item href="#">Blog</b-nav-item>
-            <li class="nav-item"> <a class="btn btn-primary" href="#">Join beta</a> </li>
-            <li class="nav-item"> <a class="btn btn-primary" href="#">Login</a> </li>
-          </b-navbar-nav>
-        </b-collapse>
-        <b-navbar-toggle target="nav_collapse" @click="hamburgerAnimation" :class="{'hamburger-active': hamburgerActive}">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span> 
-        </b-navbar-toggle>
-      </b-container>        
-    </b-navbar>
-    
-    <section class="hero-welcome-message text-center">
-      <b-container>
-        <b-row>          
-          <b-col lg="12">
-            <h1>Open source media player</h1>
-            <h2>Coming soon on android and ios</h2>          
-            <img src="@/assets/img/hero-img.svg" alt="hero-img" class="text-center hero-img">
-          </b-col>                    
-        </b-row>
-      </b-container>
-    </section>
-  </header>
-
+          <b-collapse is-nav id="nav_collapse">          
+            <b-navbar-nav class="ml-auto">
+              <b-nav-item href="#">Blog</b-nav-item>
+              <li class="nav-item">
+                <b-button @click="showJoin" class="btn btn-primary">Join beta</b-button>              
+              </li>
+              <li class="nav-item"> <a class="btn btn-primary" href="#">Login</a> </li>
+            </b-navbar-nav>
+          </b-collapse>
+          <b-navbar-toggle target="nav_collapse" @click="hamburgerAnimation" :class="{'hamburger-active': hamburgerActive}">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </b-navbar-toggle>
+        </b-container>        
+      </b-navbar>
+      
+      <section class="hero-welcome-message text-center">
+        <b-container>
+          <b-row>          
+            <b-col lg="12">
+              <h1>Open source media player</h1>
+              <h2>Coming soon on android and ios</h2>          
+              <img src="@/assets/img/hero-img.svg" alt="hero-img" class="text-center hero-img">
+            </b-col>                    
+          </b-row>
+        </b-container>
+      </section>
+    </header>
+    <join-modal/>
+  </div>
 </template>
 
 <script>
+import JoinModal from '@/components/layout/modal/join'
+// import EventBus from '@/bus/event-bus'
 export default {
   name: 'Header',
+  components: {
+    JoinModal
+  },
   data () {
     return {
       affix: false,
@@ -55,6 +64,9 @@ export default {
     },
     hamburgerAnimation () {
       this.hamburgerActive = !this.hamburgerActive
+    },
+    showJoin () {
+      this.$root.$emit('open-join-modal')
     }
   },
   created () {
