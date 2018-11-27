@@ -37,16 +37,18 @@
       </section>
     </header>
     <join-modal/>
+    <ResultModal/>
   </div>
 </template>
 
 <script>
 import JoinModal from '@/components/layout/modal/join'
-// import EventBus from '@/bus/event-bus'
+import ResultModal from '@/components/layout/modal/result'
 export default {
   name: 'Header',
   components: {
-    JoinModal
+    JoinModal,
+    ResultModal
   },
   data () {
     return {

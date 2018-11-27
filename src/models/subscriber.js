@@ -3,8 +3,8 @@ import { BaseModel } from '@/models/base'
 class Subscriber extends BaseModel {
   defaults () {
     return {
-      first_name: '',
-      last_name: '',
+      firstName: '',
+      lastName: '',
       email: '',
       role: 4
     }
@@ -12,7 +12,7 @@ class Subscriber extends BaseModel {
 
   routes () {
     return {
-      save: 'email-subscribe'
+      create: 'email-subscribe'
     }
   }
 }

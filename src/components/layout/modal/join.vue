@@ -21,24 +21,24 @@
           <b-form-group>
             <b-form-input
               type="text"
-              v-model="form.first_name"
+              v-model="form.firstName"
               placeholder="First Name"
               class="input-lg"
-              :state="first_name_state"
+              :state="firstName_state"
             ></b-form-input>
-            <b-form-invalid-feedback v-if="first_name_state == false">
+            <b-form-invalid-feedback v-if="firstName_state == false">
               This field can't be blank
             </b-form-invalid-feedback>
           </b-form-group>
           <b-form-group>
             <b-form-input
               type="text"
-              v-model="form.last_name"
+              v-model="form.lastName"
               class="input-lg"
               placeholder="Last Name"
-              :state="last_name_state"
+              :state="lastName_state"
             ></b-form-input>
-            <b-form-invalid-feedback v-if="last_name_state == false">
+            <b-form-invalid-feedback v-if="lastName_state == false">
               This field can't be blank
             </b-form-invalid-feedback>
           </b-form-group>
@@ -69,8 +69,8 @@ export default {
     return {
       showModal: false,
       form: {
-        first_name: '',
-        last_name: '',
+        firstName: '',
+        lastName: '',
         email: '',
         role: 4
       },
@@ -80,8 +80,8 @@ export default {
         {text: 'School', value: 2},
         {text: 'Bussiness', value: 1}
       ],
-      first_name_state: null,
-      last_name_state: null,
+      firstName_state: null,
+      lastName_state: null,
       email_state: null,
       email_error_msg: 'Please, enter your email',
       subscriber: new Subscriber()
@@ -95,10 +95,34 @@ export default {
   methods: {
     onSubmit (e) {
       e.preventDefault()
+      console.log(this.subscriber)
       if (this.validateForm()) {
-        this.subscriber.save(this.form).then(resp => {
-          console.log(resp)
+        fetch('https://onebenefactor.powercode.pro/api/v1/email-subscribe',
+          {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(this.form)
+          }
+        ).then(res => {
+          return res.json()
+        }).then(data => {
+          if (data.error) {
+            this.$root.$emit('open-result-modal', data.error.message)
+          } else {
+            this.$root.$emit('open-result-modal')
+            this.form.firstName = ''
+            this.form.lastName = ''
+            this.form.email = ''
+            this.form.role = 4
+            this.showModal = false
+          }
         })
+        // this.subscriber.save(JSON.stringify(this.form)).then(resp => {
+        //   console.log(resp)
+        // })
         // this.subscriber.create(this.form).then(resp => {
         //   console.log(resp)
         // })
@@ -108,18 +132,18 @@ export default {
       let that = this
 
       let error = false
-      if (!that.form.first_name) {
-        that.first_name_state = false
+      if (!that.form.firstName) {
+        that.firstName_state = false
         error = true
         setTimeout(() => {
-          that.first_name_state = null
+          that.firstName_state = null
         }, 2500)
       }
-      if (!that.form.last_name) {
-        that.last_name_state = false
+      if (!that.form.lastName) {
+        that.lastName_state = false
         error = true
         setTimeout(() => {
-          that.last_name_state = null
+          that.lastName_state = null
         }, 2500)
       }
       if (!/\S+@\S+\.\S/.test(that.form.email)) {

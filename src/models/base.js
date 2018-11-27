@@ -28,6 +28,7 @@ class BaseModel extends Model {
       method,
       data
     }
+    console.log(config)
 
     return new Promise((resolve, reject) => {
       this.getRequest(config).send().then((response) => {
