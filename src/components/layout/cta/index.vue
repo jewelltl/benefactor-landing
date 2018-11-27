@@ -20,7 +20,9 @@
                     </header>
                 </b-col>
                 <b-col lg="4">
-                    <div class="cta-button"><a class="btn btn-primary" href="#hero-section" role="button">Join the waiting list</a></div>
+                    <div class="cta-button">
+                      <b-button class="btn btn-primary" @click="showJoin">Join the waiting list</b-button>                      
+                    </div>
                 </b-col>
             </b-row>
         </b-container>        
@@ -30,6 +32,11 @@
 
 <script>
 export default {
-  name: 'CTA'
+  name: 'CTA',
+  methods: {
+    showJoin () {
+      this.$root.$emit('open-join-modal')
+    }
+  }
 }
 </script>

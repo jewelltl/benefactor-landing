@@ -35,21 +35,14 @@
           </b-row>
         </b-container>
       </section>
-    </header>
-    <join-modal/>
-    <ResultModal/>
+    </header>        
   </div>
 </template>
 
 <script>
-import JoinModal from '@/components/layout/modal/join'
-import ResultModal from '@/components/layout/modal/result'
+
 export default {
   name: 'Header',
-  components: {
-    JoinModal,
-    ResultModal
-  },
   data () {
     return {
       affix: false,
