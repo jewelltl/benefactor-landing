@@ -62,6 +62,7 @@
 </template>
 
 <script>
+import { Subscribe } from '@/models/subscribe'
 export default {
   name: 'JoinModal',
   data () {
@@ -81,8 +82,9 @@ export default {
       ],
       first_name_state: null,
       last_name_state: null,
-      email_state: null,      
-      email_error_msg: 'Please, enter your email'
+      email_state: null,
+      email_error_msg: 'Please, enter your email',
+      subscribe: new Subscribe()
     }
   },
   created () {
@@ -93,7 +95,11 @@ export default {
   methods: {
     onSubmit (e) {
       e.preventDefault()
+      console.log(this.validateForm())
+    },
+    validateForm () {
       let that = this
+
       let error = false
       if (!that.form.first_name) {
         that.first_name_state = false
@@ -117,9 +123,7 @@ export default {
           that.email_state = null
         }, 2500)
       }
-      if (!error) {
-        
-      }
+      return error
     }
   }
 }
