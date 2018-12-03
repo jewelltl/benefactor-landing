@@ -51,7 +51,6 @@ export default {
   },
   methods: {
     handleScroll (event) {
-      console.log(event)
       if (window.scrollY) {
         this.affix = true
       } else {
