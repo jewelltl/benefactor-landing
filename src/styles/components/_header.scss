@@ -8,7 +8,7 @@
 .ml-auto { padding: 1.5rem 0; }
 
 .navbar-light .navbar-toggler {
-    color: #3b28ea;
+    color: #ec6433;
     border-color: transparent;
     background: transparent;
 }
@@ -26,7 +26,7 @@ content: '';
     display: block;
     width: 0;
     height: 2px;
-    background: #4533eb;
+    background: #ec6433;
     transition: width .3s;
 }
 
@@ -86,24 +86,24 @@ content: '';
 .navbar-light .navbar-nav .nav-link,
 .hero-section .navbar.affix .nav-link,
 .navbar-light.affix .navbar-nav .nav-link:focus,
-.navbar-light.affix .navbar-nav .show>.nav-link { color: #3b28ea; }
+.navbar-light.affix .navbar-nav .show>.nav-link { color: #ec6433; }
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light.affix .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .show>.nav-link { color: #4533eb; }
+.navbar-light .navbar-nav .show>.nav-link { color: #ec6433; }
 
 .navbar-toggler .icon-bar {
     display: block;
     width: 23px;
     height: 2px;
     border-radius: 1px;
-    background-color: #3b28ea;
+    background-color: #ec6433;
     position: relative;
     transition: all 500ms ease-in-out;
 }
 
-.navbar-toggler:hover .icon-bar { background-color: #4533eb; }
+.navbar-toggler:hover .icon-bar { background-color: #e64005; }
 
 .navbar-toggler .icon-bar:not(:last-child) { margin-bottom: 5px; }
 
@@ -175,7 +175,7 @@ content: '';
 
 .signup-form .form-control {
     padding: 1.7rem 1.5rem;
-    color: #3b28ea;
+    color: #ec6433;
     background: #d8d4fb;
     border-color: #fff;
 }
@@ -185,30 +185,30 @@ content: '';
     border-color: #fff;
 }
 .signup-form ::-webkit-input-placeholder {
-    color: #3b28ea !important;
+    color: #ec6433 !important;
     font-size: 18px;
 }
 .signup-form ::-moz-placeholder {
-    color: #3b28ea !important;
+    color: #ec6433 !important;
     font-size: 18px;
 }
 .signup-form :-ms-input-placeholder {
-    color: #3b28ea !important;
+    color: #ec6433 !important;
     font-size: 18px;
 }
 .signup-form :-moz-placeholder {
-    color: #3b28ea !important;
+    color: #ec6433 !important;
     font-size: 18px;
 }
 @keyframes autofill {
     to {
-        color: #3b28ea;
+        color: #ec6433;
         background: #d8d4fb;
     }
 }
 @-webkit-keyframes autofill {
     to {
-    color: #3b28ea;
+    color: #ec6433;
     background: #d8d4fb;
     }
 }
@@ -232,16 +232,16 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .btn-primary:disabled,
 .navbar.affix .nav-item .btn-primary {
     color: #fff;
-    background-color: #3b28ea;
-    border-color: #3b28ea;
+    background-color: #ec6433;
+    border-color: #ec6433;
 }
 
 .btn-primary:hover,
 .navbar.affix .nav-item .btn-primary:hover,
 .btn-primary:not([disabled]):not(.disabled):active {
     color: #fff;
-    background-color: #4533eb;
-    border-color: #4533eb;
+    background-color: #e64005;
+    border-color: #e64005;
 }
 
 .btn-primary:not([disabled]):not(.disabled):active,
@@ -252,13 +252,13 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     padding: .5rem 2rem;
     margin: 10px 0;
     background-color: transparent;
-    border-color: #3b28ea;
-    color: #3b28ea;
+    border-color: #ec6433;
+    color: #ec6433;
 }
 
 .navbar .nav-item .btn:hover {
-    background-color: #4533eb;
-    border-color: #4533eb;
+    background-color: #e64005;
+    border-color: #e64005;
     color: #fff;
 }
 

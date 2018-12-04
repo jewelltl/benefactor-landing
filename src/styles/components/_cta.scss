@@ -1,5 +1,5 @@
 .cta {
-    background: #3b28ea;
+    background: #ec6433;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -16,13 +16,13 @@
     .cta-button {
         margin-top: 2.25rem;
         .btn, .btn:focus {
-            color: #3b28ea;
+            color: #ec6433;
             background-color: #fff;
             border-color: #fff;
         }
         .btn:hover, .btn-primary:not([disabled]):not(.disabled):active{
             background-color: rgba(255, 255, 255, 0.922);
-            color: #3b28ea;
+            color: #e64005;
             box-shadow: none;
             border-color: rgba(255, 255, 255, 0.922);
         }

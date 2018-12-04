@@ -26,9 +26,9 @@
                 position: relative;
                 transition: all .8s ease;
                 font-size: .9rem;
-                background: #3b28ea;
+                background: #ec6433;
                 &:hover {
-                    background: #4533eb;
+                    background: #e64005;
                 }
             }
             &:not(:nth-last-child(1)) {
@@ -46,7 +46,7 @@
         a {
             color: #898d98;
             &:hover, &:focus {
-                color: #4533eb;
+                color: #e64005;
             }
         }
     }
