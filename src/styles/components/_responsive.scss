@@ -32,7 +32,11 @@
     
     .features .section-header h3 { font-size: 3rem; }
     
-    .features-more-wrapper { padding: 3rem 1.5rem; }
+    .learn-more {
+        h2 {
+            margin-top: 1rem;
+        }
+    }
     
     .cta h2 { font-size: 3.75rem; }
 }
@@ -85,7 +89,7 @@
         margin: 1.5rem 0 0;
     }
     
-    .features-more .container > .row > [class^=col]:not(:last-child) { margin-bottom: 0; }
+    .learn-more .container > .row > [class^=col]:not(:last-child) { margin-bottom: 0; }
     
     .cta { text-align: left; }
     

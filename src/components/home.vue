@@ -1,8 +1,7 @@
 <template>
   <div>
-    <Header/>
-    <Features/>
-    <FeatureMore/>
+    <Header/>    
+    <LearnMore/>
     <CTA/>
     <Footer/>
     <JoinModal/>
@@ -12,8 +11,7 @@
 
 <script>
 import Header from './layout/header'
-import Features from './layout/features'
-import FeatureMore from './layout/features-more'
+import LearnMore from './layout/learn-more'
 import CTA from './layout/cta'
 import Footer from './layout/footer'
 import JoinModal from '@/components/layout/modal/join'
@@ -23,8 +21,7 @@ export default {
   name: 'Home',
   components: {
     Header,
-    Features,
-    FeatureMore,
+    LearnMore,
     CTA,
     Footer,
     JoinModal,

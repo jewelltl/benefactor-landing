@@ -1,14 +1,26 @@
-.features-more{
-    h2 {
+.learn-more{
+    .section-header h2 {
+        color: #3b28ea;
+        font-size: 3.75rem;
+    }
+    h3 {
         color: #3b28ea;
         font-size: 1.875rem;
+        line-height: normal;
+        text-align: left;
+        height: 100px;
+        padding: 50px 0 0 110px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
     }
+    
     img {
-        width: 130px;
-        height: 130px;
+        width: 78px;
+        height: 80px;
         margin-top: 1.5rem;
+        position: absolute;
     }
-    .features-more-wrapper {
+    .learn-more-wrapper {
         border: 1px solid #dddddd;
         border-radius: 6px;
         padding: 2.25rem 1rem;

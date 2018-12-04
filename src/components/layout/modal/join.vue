@@ -177,7 +177,9 @@ export default {
     text-align: center;
     .form-group {
       margin-bottom: 1.5rem;
-      
+      .btn-group-sm>.btn, .btn-sm {
+        border-radius: 1.2rem;
+      }
     }
   }
 </style>
