@@ -200,6 +200,12 @@ content: '';
     color: #3b28ea !important;
     font-size: 18px;
 }
+@keyframes autofill {
+    to {
+        color: #3b28ea;
+        background: #d8d4fb;
+    }
+}
 @-webkit-keyframes autofill {
     to {
     color: #3b28ea;
