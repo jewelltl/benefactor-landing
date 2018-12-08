@@ -23,13 +23,18 @@
           </div>
         </b-col>
       </b-row>
-    </b-container>        
+    </b-container>
+    <subscribe-modal/>
   </section>
 </template>
 
 <script>
+import SubscribeModal from '@/components/layout/modals/subscribe'
 export default {
   name: 'CTA',
+  components: {
+    SubscribeModal
+  },
   methods: {
     showJoin () {
       this.$root.$emit('open-join-modal')

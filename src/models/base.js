@@ -22,13 +22,16 @@ class BaseModel extends Model {
     }
   }
 
+  getFetchURL () {
+    return Vue.http.options.root
+  }
+
   _customRequest (path, method = 'post', data = {}) {
     let config = {
       url: [this.getFetchURL(), path].join('/'),
       method,
       data
     }
-    console.log(config)
 
     return new Promise((resolve, reject) => {
       this.getRequest(config).send().then((response) => {
@@ -36,9 +39,8 @@ class BaseModel extends Model {
         resolve(this)
       }, (e) => {
         console.error('[_customRequest] Error: ', e)
-
-        let errors = e.response.response.data.errors
-        let err = (errors && errors[0].detail) || e.message || 'Something went wrong'
+        let errors = e.response.response.data.errors || e.response.response.data.error
+        let err = errors.message || e.message || 'Something went wrong'
         reject(err)
       })
     })
@@ -54,6 +56,9 @@ class BaseModel extends Model {
 }
 
 class BaseCollection extends Collection {
+  getFetchURL () {
+    return Vue.http.options.root
+  }
   getRequest (config) {
     config.baseURL = Vue.http.options.root
     config.headers = Vue.http.options.headers

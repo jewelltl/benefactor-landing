@@ -313,3 +313,28 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
         height: 100%;
     } 
 }
+
+.btn-outline-primary {
+    color: #ec6433;
+    border-color: #ec6433;
+    &:hover {     
+        background-color: #ec6433;   
+        border-color: #ec6433;
+    }
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show>.btn-outline-primary.dropdown-toggle{
+    background-color: #ec6433;
+    border-color: #ec6433;
+}
+.btn-group-sm>.btn, .btn-sm {
+    padding: 0.6rem 0.8rem;
+    border-radius: 1.2rem;
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled).active.focus
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-outline-primary.dropdown-toggle:focus{
+    box-shadow: 0 0 0 0.2rem rgba(236,100,51,.5)
+}

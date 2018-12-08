@@ -1,19 +1,20 @@
 <template>
   <div>
-    <header class="hero-section" id="hero-section">         
+    <auth-modal/>
+    <notification-modal/>
+    <header>
       <b-navbar toggleable="lg" type="light" variant="light" :class="{affix: affix}">
         <b-container>
           <b-navbar-brand href="#">
             <img class="logo" src="@/assets/img/logo_main.svg" alt="Alpha">
           </b-navbar-brand>
-
-          <b-collapse is-nav id="nav_collapse">          
+          <b-collapse is-nav id="nav_collapse">
             <b-navbar-nav class="ml-auto">
               <b-nav-item href="#">Blog</b-nav-item>
               <li class="nav-item">
-                <b-button @click="showJoin" class="btn btn-primary">Join beta</b-button>              
+                <b-button class="btn btn-primary" @click="showAuth('register')">Join beta</b-button>
               </li>
-              <li class="nav-item"> <a class="btn btn-primary" href="#">Login</a> </li>
+              <li class="nav-item"> <b-button class="btn btn-primary" @click="showAuth('login')">Login</b-button> </li>
             </b-navbar-nav>
           </b-collapse>
           <b-navbar-toggle target="nav_collapse" @click="hamburgerAnimation" :class="{'hamburger-active': hamburgerActive}">
@@ -21,30 +22,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span> 
           </b-navbar-toggle>
-        </b-container>        
-      </b-navbar>
-      
-      <section class="hero-welcome-message text-center">
-        <b-container>
-          <b-row>          
-            <b-col lg="12">
-              <h1>Who we are</h1>
-              <h2>Coming soon on android and ios</h2>
-              <div class="video-container">                
-                  <iframe width="800" height="600" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen></iframe>                
-              </div> 
-            </b-col>                                
-          </b-row>          
         </b-container>
-      </section>
-    </header>        
+      </b-navbar>
+    </header>
   </div>
 </template>
-
 <script>
+
+import NotificationModal from '@/components/layout/modals/notification'
+import AuthModal from '@/components/layout/modals/auth'
 
 export default {
   name: 'Header',
+  components: {
+    NotificationModal,
+    AuthModal
+  },
   data () {
     return {
       affix: false,
@@ -62,8 +55,8 @@ export default {
     hamburgerAnimation () {
       this.hamburgerActive = !this.hamburgerActive
     },
-    showJoin () {
-      this.$root.$emit('open-join-modal')
+    showAuth (key) {
+      this.$root.$emit('show-auth-modal', key)
     }
   },
   created () {

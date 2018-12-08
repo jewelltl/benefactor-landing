@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'ResultModal',
+  name: 'NotificationModal',
   data () {
     return {
       showModal: false,
@@ -22,7 +22,7 @@ export default {
   created () {
     this.$root.$on('open-result-modal', (err) => {
       if (err) {
-        this.error_msg = err === 'Duplicate resource or resource already exists' ? 'Your email is already in our invite list' : err
+        this.error_msg = err === 'Duplicate resource or resource already exists' ? 'Your email is already in our invite list.' : err
         this.error = true
       }
       this.showModal = true
