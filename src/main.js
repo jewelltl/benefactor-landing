@@ -12,12 +12,13 @@ import store from './store'
 import VueAuth from '@websanova/vue-auth'
 import moment from 'moment'
 import VueMoment from 'vue-moment'
-import Snotify, {SnotifyPosition} from 'vue-snotify'
+import CxltToastr from 'cxlt-vue2-toastr'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css'
-import 'vue-snotify/styles/material.css'
+import 'cxlt-vue2-toastr/dist/css/cxlt-vue2-toastr.css'
+
 import './styles/main.scss'
 
 moment.updateLocale('en', {
@@ -36,13 +37,11 @@ Vue.use(BootstrapVue)
 Vue.use(VueResource)
 Vue.use(VeeValidate)
 Vue.use(datePicker)
-const snotifyOptions = {
-  toast: {
-    position: SnotifyPosition.rightTop
-  }
-}
-Vue.use(Snotify, snotifyOptions)
 Vue.use(VueMoment, moment)
+Vue.use(CxltToastr, {
+  timeOut: 3000,
+  position: 'top right'
+})
 
 Vue.config.productionTip = false
 

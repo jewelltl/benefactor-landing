@@ -87,17 +87,29 @@ export default {
           //   fetchUser: true
           // })
           this.$http.post('token', this.form).then(res => {
-            this.$snotify.success('You logged in successfully!', 'Succeed')
+            this.$toast.success({
+              title: 'Succeed',
+              message: 'You logged in successfully!'
+            })
           }).catch(err => {
             if (err.status === 401 || err.status === 403) {
-              this.$snotify.error(err.body.error.message, 'Failure')
+              this.$toast.error({
+                title: 'Failure',
+                message: err.body.error.message
+              })
             } else if (err.status === 412) {
               localStorage.setItem('auth_token', err.body.verifyToken)
               localStorage.setItem('current_user', JSON.stringify(err.body.user))
               this.$store.dispatch('auth/authenticated')
-              this.$snotify.info('You need to complete your information.', 'Infomation')
+              this.$toast.info({
+                title: 'Information',
+                message: 'You need to complete your information.'
+              })
             } else {
-              this.$snotify.error('Something went wrong', 'Failure')
+              this.$toast.error({
+                title: 'Failure',
+                message: 'Something went wrong'
+              })
             }
           })
         })

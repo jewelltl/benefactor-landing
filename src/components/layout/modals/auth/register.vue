@@ -126,13 +126,22 @@ export default {
       .then(valid => {
         if (valid) {
           this.$http.post('token/request', this.form).then(resp => {
-            this.$snotify.success('Verification email was sent to your inbox!', 'Succeed')
+            this.$toast.success({
+              title: 'Succeed',
+              message: 'Verification email was sent to your inbox!'
+            })
             this.closeModal()
           }).catch(errs => {
             if (typeof errs.body.error !== 'undefined') {
-              this.$snotify.error(errs.body.error.message, 'Failure')
+              this.$toast.error({
+                title: 'Failure',
+                message: errs.body.error.message
+              })
             } else {
-              this.$snotify.error('Something went wrong', 'Failure')
+              this.$toast.error({
+                title: 'Failure',
+                message: 'Something went wrong'
+              })
             }
           })
         }

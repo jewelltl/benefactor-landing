@@ -113,11 +113,17 @@ export default {
         .then(res => {
           if (res) {
             this.subscriber.post('email-subscribe', this.form).then((resp) => {
-              this.$snotify.success('Thank you for requesting the invite!', 'Succeed')
+              this.$toast.success({
+                title: 'Succeed',
+                message: 'Thank you for requesting the invite!'
+              })
               this.clearForm()
               this.showModal = false
             }, (err) => {
-              this.$snotify.error(err, 'Failure')
+              this.$toast.error({
+                title: 'Failure',
+                message: err
+              })
             })
           }
         })
