@@ -8,7 +8,6 @@
       <Header/>
       <router-view></router-view>
       <Footer/>
-      <vue-snotify></vue-snotify>
     </div>
   </div>
 </template>
