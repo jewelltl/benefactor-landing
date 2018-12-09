@@ -8,6 +8,11 @@
       <Header/>
       <router-view></router-view>
       <Footer/>
+      <back-to-top>
+        <button type="button" class="btn btn-to-top">
+          <font-awesome-icon icon="chevron-up"/>  
+        </button>
+      </back-to-top>
     </div>
   </div>
 </template>
@@ -45,6 +50,20 @@ export default {
     flex-direction: column;
     span {
       padding: 32px;
+    }
+  }
+  .btn-to-top {
+    width: 60px;
+    height: 60px;
+    padding: 10px 16px;
+    font-size: 22px;
+    line-height: 22px;
+    border-radius: 50%;
+    background-color: rgba(236, 100, 51, 0.7);
+    color: white;
+    transition-duration: .3s;
+    &:hover {
+      background-color: rgba(236, 100, 51, 1);
     }
   }
 </style>

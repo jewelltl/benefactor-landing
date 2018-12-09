@@ -13,6 +13,10 @@ import VueAuth from '@websanova/vue-auth'
 import moment from 'moment'
 import VueMoment from 'vue-moment'
 import CxltToastr from 'cxlt-vue2-toastr'
+import BackToTop from 'vue-backtotop'
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {faChevronUp} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -32,11 +36,15 @@ moment.updateLocale('en', {
   }
 })
 
+library.add(faChevronUp)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
 Vue.use(Vuex)
 Vue.use(BootstrapVue)
 Vue.use(VueResource)
 Vue.use(VeeValidate)
 Vue.use(datePicker)
+Vue.use(BackToTop)
 Vue.use(VueMoment, moment)
 Vue.use(CxltToastr, {
   timeOut: 3000,

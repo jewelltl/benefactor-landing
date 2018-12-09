@@ -98,6 +98,7 @@ export default {
                 message: err.body.error.message
               })
             } else if (err.status === 412) {
+              console.log(err)
               localStorage.setItem('auth_token', err.body.verifyToken)
               localStorage.setItem('current_user', JSON.stringify(err.body.user))
               this.$store.dispatch('auth/authenticated')
