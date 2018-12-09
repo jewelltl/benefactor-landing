@@ -34,6 +34,7 @@ export default {
   },
   mounted () {
     let that = this
+    // This timer will be replaced with server response for loader.
     setTimeout(() => {
       that.loaded = true
     }, 1000)
