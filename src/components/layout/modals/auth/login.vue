@@ -76,9 +76,11 @@ export default {
           //     auth: this.auth
           //   },
           //   success: function (a) {
+          //     console.log('success')
           //     console.log(a)
           //   },
           //   error: function (e) {
+          //     console.log('error')
           //     console.log(e)
           //   },
           //   rememberMe: true,
@@ -91,6 +93,7 @@ export default {
               this.$snotify.error(err.body.error.message, 'Failure')
             } else if (err.status === 412) {
               localStorage.setItem('auth_token', err.body.verifyToken)
+              localStorage.setItem('current_user', JSON.stringify(err.body.user))
               this.$store.dispatch('auth/authenticated')
               this.$snotify.info('You need to complete your information.', 'Infomation')
             } else {

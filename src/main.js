@@ -70,7 +70,8 @@ Vue.use(VueAuth, {
   parseUserData (response) {
     return response
   },
-  rolesVar: 'role'
+  rolesVar: 'role',
+  loginData: {url: 'token', method: 'POST', redirect: '/', fetchUser: true}
 })
 
 /* eslint-disable no-new */

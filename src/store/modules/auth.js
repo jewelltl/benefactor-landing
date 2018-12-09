@@ -1,4 +1,4 @@
-import JwtDecode from 'jwt-decode'
+// import JwtDecode from 'jwt-decode'
 import Profile from '@/models/profile'
 
 // The module is namespaced
@@ -15,8 +15,9 @@ const state = {
 const actions = {
   authenticated ({ commit }) {
     try {
-      let jwt = JwtDecode(localStorage.auth_token)
-      console.log('[Auth] Got JWT', jwt)
+      let jwt = localStorage.getItem('auth_token')
+      // let jwt = JwtDecode(localStorage.getItem('auth_token'))
+      // console.log('[Auth] Got JWT', jwt)
       commit('authenticated', jwt)
     } catch (e) {
       commit('authenticationError', e)
@@ -32,7 +33,8 @@ const actions = {
 const mutations = {
   authenticated (state, jwt) {
     state.authenticated = true
-    state.user.assign(jwt)
+    // state.user.assign(jwt)
+    console.log(JSON.parse(localStorage.getItem('current_user')))
   },
 
   authenticationError (state, e) {
