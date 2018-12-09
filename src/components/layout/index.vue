@@ -10,7 +10,7 @@
       <Footer/>
       <back-to-top>
         <button type="button" class="btn btn-to-top">
-          <font-awesome-icon icon="chevron-up"/>  
+          <v-icon name="arrow-up" scale="1.5"/>
         </button>
       </back-to-top>
     </div>

@@ -14,9 +14,8 @@ import moment from 'moment'
 import VueMoment from 'vue-moment'
 import CxltToastr from 'cxlt-vue2-toastr'
 import BackToTop from 'vue-backtotop'
-import {library} from '@fortawesome/fontawesome-svg-core'
-import {faChevronUp} from '@fortawesome/free-solid-svg-icons'
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -36,9 +35,7 @@ moment.updateLocale('en', {
   }
 })
 
-library.add(faChevronUp)
-Vue.component('font-awesome-icon', FontAwesomeIcon)
-
+Vue.component('v-icon', Icon)
 Vue.use(Vuex)
 Vue.use(BootstrapVue)
 Vue.use(VueResource)

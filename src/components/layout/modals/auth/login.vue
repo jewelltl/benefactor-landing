@@ -72,12 +72,11 @@ export default {
         .validateAll()
         .then(res => {
           // this.$auth.login({
-          //   params: {
-          //     auth: this.auth
-          //   },
+          //   params: this.auth,
           //   success: function (a) {
           //     console.log('success')
           //     console.log(a)
+          //     this.$store.dispatch('auth/authenticated')
           //   },
           //   error: function (e) {
           //     console.log('error')
@@ -101,7 +100,7 @@ export default {
               console.log(err)
               localStorage.setItem('auth_token', err.body.verifyToken)
               localStorage.setItem('current_user', JSON.stringify(err.body.user))
-              this.$store.dispatch('auth/authenticated')
+              // this.$store.dispatch('auth/authenticated')
               this.$toast.info({
                 title: 'Information',
                 message: 'You need to complete your information.'
