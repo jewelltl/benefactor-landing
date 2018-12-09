@@ -5,12 +5,12 @@
     <header>
       <b-navbar toggleable="lg" type="light" variant="light" :class="{affix: affix}">
         <b-container>
-          <b-navbar-brand href="#">
+          <b-navbar-brand href="/#/">
             <img class="logo" src="@/assets/img/logo_main.svg" alt="Alpha">
           </b-navbar-brand>
           <b-collapse is-nav id="nav_collapse">
             <b-navbar-nav class="ml-auto">
-              <b-nav-item href="#">Blog</b-nav-item>
+              <b-nav-item href="/#/">Blog</b-nav-item>
               <li class="nav-item">
                 <b-button class="btn btn-primary" @click="showAuth('register')">Join beta</b-button>
               </li>

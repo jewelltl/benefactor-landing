@@ -59,11 +59,13 @@ export default {
     font-size: 22px;
     line-height: 22px;
     border-radius: 50%;
-    background-color: rgba(236, 100, 51, 0.7);
-    color: white;
+    background-color: white;
+    border: solid 2px rgb(236, 100, 51);
+    color: rgb(236, 100, 51);
     transition-duration: .3s;
     &:hover {
-      background-color: rgba(236, 100, 51, 1);
+      background-color: rgb(236, 100, 51);
+      color: white;
     }
   }
 </style>
