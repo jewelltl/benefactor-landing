@@ -64,7 +64,7 @@ Vue.use(VueAuth, {
     enabled: false
   },
   fetchData: {
-    url: 'me',
+    url: 'token/request/confirm',
     enabled: true
   },
   parseUserData (response) {
